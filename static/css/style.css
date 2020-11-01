@@ -6806,7 +6806,7 @@ ul.check-circle li:before {
 }
 
 #header .logo a, #footer .logo a, .chaser .logo a {
-  background: url("../images/logo.png") no-repeat 0 0;
+  background: url("../images/logo1.png") no-repeat 0 0;
   display: block;
 }
 #header .logo img, #footer .logo img, .chaser .logo img {
@@ -7558,8 +7558,8 @@ ul.menu.mini li:hover a, ul.menu.mini li.active a {
 .no-backgroundsize .chaser .logo a {
   background-size: auto 20px;
   background-image: none;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/logo.png', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/logo.png', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/logo1.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/logo1.png', sizingMethod='scale')";
 }
 
 /* 3.2.0. Sign up & Login box */

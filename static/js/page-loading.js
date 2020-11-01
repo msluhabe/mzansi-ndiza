@@ -9,9 +9,9 @@
 
 if (typeof Pace != "undefined") {
     var soapPageLoadingContent = false;
-    //document.write('<img alt="" src="'{{ MEDIA_URL }}logo2.png'" style="display: none;">');
+    //document.write('<img alt="" src="'{{baseUrl}}/{{logo2.png}}'" style="display: none;">');
     var logoImg = new Image();
-    logoImg.src = "{{ MEDIA_URL }}logo2.png";
+    logoImg.src = "/images/logo2.png";
     var soapPageLoadingProgressInterval = setInterval(function() {
         try {
             if (document.body.className.indexOf("pace-done") != -1) {
@@ -26,7 +26,7 @@ if (typeof Pace != "undefined") {
                                                     '<div class="container">' +
                                                             '<h1 class="logo block">' +
                                                                 '<a title="Travelo" href="#">' +
-                                                                    '<img alt="" src="{{ MEDIA_URL }}logo2.png">' +
+                                                                    '<img alt="" src="/images/logo2.png">' +
                                                                 '</a>' +
                                                             '</h1>' +
                                                             '<div class="loading-progress-bar block col-sm-10 col-md-9 col-lg-8">' +

@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
 <!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
@@ -23,10 +24,10 @@
     <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
     
     <!-- Current Page Styles -->
-    <link rel="stylesheet" type="text/css" href="{% static 'components/revolution_slider/css/settings.css' %} media="screen" />
-    <link rel="stylesheet" type="text/css" href="{% static 'components/revolution_slider/css/style.css' %} media="screen" />
-    <link rel="stylesheet" type="text/css" href="{% static 'components/jquery.bxslider/jquery.bxslider.css' %} media="screen" />
-    <link rel="stylesheet" type="text/css" href="{% static 'components/flexslider/flexslider.css' %} media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'components/revolution_slider/css/settings.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'components/revolution_slider/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'components/jquery.bxslider/jquery.bxslider.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'components/flexslider/flexslider.css' %}">
     
     <!-- Main Style -->
     <link id="main-style" rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -42,7 +43,7 @@
     
     <!-- CSS for IE -->
     <!--[if lte IE 9]>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/ie.css' %} />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/ie.css' %}">
     <![endif]-->
     
 
@@ -113,7 +114,7 @@
                 <div class="container">
                     <h1 class="logo navbar-brand">
                         <a href="index.html" title="Travelo - home">
-                            <img src="{{ MEDIA_URL}}logo.png" alt="Travelo HTML5 Template" />
+                            <img src="{{baseUrl}}/{{logo1.png}}" alt="Travelo HTML5 Template" />
                         </a>
                     </h1>
                     
@@ -1000,7 +1001,7 @@
                 <div class="container">
                     <div class="logo pull-left">
                         <a href="index.html" title="Travelo - home">
-                            <img src="{{ MEDIA_URL}}logo.png" alt="Travelo HTML5 Template" />
+                            <img src="{{baseUrl}}/{{logo1.png}}" alt="Travelo HTML5 Template" />
                         </a>
                     </div>
                     <div class="pull-right">
