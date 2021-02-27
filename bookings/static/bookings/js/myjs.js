@@ -39,5 +39,13 @@ $(document).ready(function(){
         });
     });
 
+    $("#one-way-btn").on("click",function(){
+        alert("Test click");
+    });
+
+    
+
 });
+
+
 

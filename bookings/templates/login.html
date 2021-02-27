@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <!-- Javascript Page Loader -->
+    <script type="text/javascript" src="{% static 'js/pace.min.js' %}" data-pace-options='{ "ajax": false }'></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="{% static 'js/jquery-3.5.1.js' %}"></script> <!-- Manually downloaded jquery file -->
+    <script type="text/javascript" src="{% static 'js/myjs-login.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.redirect.js' %}"></script>
+
+</head>
+<body>
+<!-- MultiStep Form -->
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <form id="msform">
+            <!-- progressbar -->
+            <!--
+            <ul id="progressbar">
+                <li class="active">Personal Details</li>
+                <li>Social Profiles</li>
+                <li>Account Setup</li>
+            </ul>
+            -->
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">Login</h2>
+                <!--
+                <h3 class="fs-subtitle">Tell us something more about you</h3>
+                -->
+                <input type="text" id="uname" name="uname" placeholder="Username"/>
+                <input type="password" id="pword" name="pword" placeholder="Password" required/>
+                <!--
+                <input type="text" name="phone" placeholder="Phone"/>
+                -->
+                <input type="button" id="login" name="login" class="next action-button" value="Login"/>
+                
+            </fieldset>
+            <!--
+            <fieldset>
+                <h2 class="fs-title">Social Profiles</h2>
+                <h3 class="fs-subtitle">Your presence on the social network</h3>
+                <input type="text" name="twitter" placeholder="Twitter"/>
+                <input type="text" name="facebook" placeholder="Facebook"/>
+                <input type="text" name="gplus" placeholder="Google Plus"/>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Create your account</h2>
+                <h3 class="fs-subtitle">Fill in your credentials</h3>
+                <input type="text" name="email" placeholder="Email"/>
+                <input type="password" name="pass" placeholder="Password"/>
+                <input type="password" name="cpass" placeholder="Confirm Password"/>
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+            </fieldset>
+            -->
+        </form>
+        <!-- link to designify.me code snippets -->
+        <!--
+        <div class="dme_link">
+            <p><a href="http://designify.me/code-snippets-js/" target="_blank">More Code Snippets</a></p>
+        </div>
+        -->
+        <!-- /.link to designify.me code snippets -->
+    </div>
+        <!-- Modal content -->
+            <div id="myModal2" class="modal1">
+                <div class="modal-content1" >
+                    <div class="modal-header1">
+                        <span class="close1">&times;</span>
+                        <h2></h2>
+                    </div>
+                    <div class="modal-body1">
+                        <h3>
+                            <p id="p1" style="text-align:center"></p>
+                        </h3>
+                    </div>
+                    <div class="modal-footer1">
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+</div>
+<!-- /.MultiStep Form -->
+</body>

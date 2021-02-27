@@ -4,9 +4,21 @@
 <!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
 <!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
 <!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 30%;
+}
+</style>   
 <head>
     <!-- Page Title -->
-    <title>Travelo - Travel, Tour Booking HTML5 Template</title>
+    <title>Travelot - Travel, Tour Booking HTML5 Template</title>
     
     <!-- Meta Tags -->
     <meta charset="utf-8">
@@ -21,13 +33,15 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+    <link rel="stylesheet" href="{% static 'css/w3.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
     
     <!-- Current Page Styles -->
-    <link rel="stylesheet" type="text/css" href="{% static 'components/revolution_slider/css/settings.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'components/revolution_slider/css/style.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'components/jquery.bxslider/jquery.bxslider.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'components/flexslider/flexslider.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'components/revolution_slider/css/settings.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'components/revolution_slider/css/style.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'components/jquery.bxslider/jquery.bxslider.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'components/flexslider/flexslider.css' %}" >
     
     <!-- Main Style -->
     <link id="main-style" rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -56,11 +70,12 @@
     <!-- Javascript Page Loader -->
     <script type="text/javascript" src="{% static 'js/pace.min.js' %}" data-pace-options='{ "ajax": false }'></script>
     <script type="text/javascript" src="{% static 'js/page-loading.js' %}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{% static 'js/myjs.js' %}"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="{% static 'js/jquery-3.5.1.js' %}"></script> <!-- Manually downloaded jquery file -->
+    <script type="text/javascript" src="{% static 'js/myjs-index.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.redirect.js' %}"></script>
-     
 
+  
 </head>
 <body>
     <div id="page-wrapper">
@@ -69,6 +84,7 @@
                 <div class="container">
                     <ul class="quick-menu pull-left">
                         <li><a href="#">My Account</a></li>
+                        <!--
                         <li class="ribbon">
                             <a href="#">English</a>
                             <ul class="menu mini">
@@ -87,10 +103,12 @@
                                 <li><a href="#" title="Svenska">Svenska</a></li>
                             </ul>
                         </li>
+                        -->
                     </ul>
                     <ul class="quick-menu pull-right">
                         <li><a href="#travelo-login" class="soap-popupbox">LOGIN</a></li>
                         <li><a href="#travelo-signup" class="soap-popupbox">SIGNUP</a></li>
+                        <!--
                         <li class="ribbon currency">
                             <a href="#" title="">USD</a>
                             <ul class="menu mini">
@@ -109,6 +127,15 @@
                                 <li><a href="#" title="IDR">IDR</a></li>
                             </ul>
                         </li>
+                        -->
+                    </ul>
+                </div>
+                <!-- progressbar -->
+                <div class="container">
+                    <ul id="progressbar">
+                        <li class="active">Date</li>
+                        <li>Flight + Extras</li>
+                        <li>Payment</li>
                     </ul>
                 </div>
             </div>
@@ -120,12 +147,14 @@
                 </a>
 
                 <div class="container">
+                <!--
                     <h1 class="logo navbar-brand">
                         <a href="index.html" title="Travelo - home">
-                            <img src="{{baseUrl}}/{{logo1.png}}" alt="Travelo HTML5 Template" />
+                            <img src="{{baseUrl}}/Lift2.jpg" alt="" />
                         </a>
                     </h1>
-
+                -->
+                    <!--
                     <nav id="main-menu" role="navigation">
                         <ul class="menu">
                             <li class="menu-item-has-children">
@@ -168,7 +197,7 @@
                                     <li><a href="flight-thankyou.html">Thank You</a></li>
                                 </ul>
                             </li>
-                            <!---
+                            
                             <li class="menu-item-has-children">
                                 <a href="car-index.html">Cars</a>
                                 <ul>
@@ -362,8 +391,9 @@
                                     </li>
                                 </ul>
                             </li>
-                        </ul> --->
+                        </ul> 
                     </nav>
+                    -->
                 </div>
                 
                 <nav id="mobile-menu-01" class="mobile-menu collapse">
@@ -718,25 +748,25 @@
             </div>
         </header>
         <div id="slideshow">
-            <div class="fullwidthbanner-container">
-                <div class="revolution-slider rev_slider" style="height: 0; overflow: hidden;">
+            <div class="fullwidthbanner-container" style="margin-bottom: 10px;">
+                <div class="revolution-slider rev_slider">
                     <ul>    <!-- SLIDE  -->
                         <!-- Slide1 -->
                         <li data-transition="zoomin" data-slotamount="7" data-masterspeed="1500">
                             <!-- MAIN IMAGE -->
-                            <img src="http://placehold.it/2080x646" alt="">
+                            <img src="{{baseUrl}}/Lift.jpg" alt="" style="background:#ffc30d;opacity: 0">
                         </li>
                         
                         <!-- Slide2 -->
                         <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1500">
                             <!-- MAIN IMAGE -->
-                            <img src="http://placehold.it/2080x646" alt="">
+                            <img src="{{baseUrl}}/Lift.jpg" alt="" style="background:#ffc30d;opacity: 0">
                         </li>
                         
                         <!-- Slide3 -->
                         <li data-transition="slidedown" data-slotamount="7" data-masterspeed="1500">
                             <!-- MAIN IMAGE -->
-                            <img src="http://placehold.it/2080x646" alt="">
+                            <img src="{{baseUrl}}/Lift.jpg" alt="" style="background:#ffc30d;opacity: 0">
                         </li>
                     </ul>
                 </div>
@@ -747,9 +777,9 @@
             <div class="search-box-wrapper">
                 <div class="search-box container">
                     <ul class="search-tabs clearfix">
-                        <li class="active"><a href="#hotels-tab" data-toggle="tab">HOTELS</a></li>
-                        <li><a href="#flights-tab" data-toggle="tab">FLIGHTS</a></li>
-                        <li><a href="#flight-and-hotel-tab" data-toggle="tab">FLIGHT &amp; HOTELS</a></li>
+                        <!--<li class="active"><a href="#hotels-tab" data-toggle="tab">HOTELS</a></li>-->
+                        <li class="active"><a href="#flights-tab" data-toggle="tab">FLIGHTS</a></li>
+                        <!--<li><a href="#flight-and-hotel-tab" data-toggle="tab">FLIGHT &amp; HOTELS</a></li>-->
                         <!--
                         <li><a href="#cars-tab" data-toggle="tab">CARS</a></li>
                         <li><a href="#cruises-tab" data-toggle="tab">CRUISES</a></li>
@@ -757,21 +787,24 @@
                         <li><a href="#flight-status-tab" data-toggle="tab">FLIGHT STATUS</a></li>
                         <li><a href="#online-checkin-tab" data-toggle="tab">ONLINE CHECK IN</a></li>
                     </ul>
+                    <!--
                     <div class="visible-mobile">
                         <ul id="mobile-search-tabs" class="search-tabs clearfix">
                             <li class="active"><a href="#hotels-tab">HOTELS</a></li>
                             <li><a href="#flights-tab">FLIGHTS</a></li>
                             <li><a href="#flight-and-hotel-tab">FLIGHT &amp; HOTELS</a></li>
-                            <!--
+                            
                             <li><a href="#cars-tab">CARS</a></li>
                             <li><a href="#cruises-tab">CRUISES</a></li>
-                            -->
+                            
                             <li><a href="#flight-status-tab">FLIGHT STATUS</a></li>
                             <li><a href="#online-checkin-tab">ONLINE CHECK IN</a></li>
                         </ul>
                     </div>
+                    -->
                     
                     <div class="search-tab-content">
+                        <!--
                         <div class="tab-pane fade active in" id="hotels-tab">
                             <form action="hotel-list-view.html" method="post">
                                 <div class="row">
@@ -844,68 +877,98 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
+                        </div>-->
 
-                        <div class="tab-pane fade" id="flights-tab">
-                            <form id="flt_request_form" method="post"> 
+                        <div class="tab-pane fade active in" id="flights-tab">
+                            <form id="flt_request_form" method="post" action="/flight-list"> 
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <h4 class="title">Where</h4>
+                                        <h4 class="title">WHERE
+                                            <i class="fa fa-plane"></i>
+                                        </h4>
                                         <div class="form-group">
                                             <label>Leaving From</label>
-                                            <input type="text" name = "flights_leaving_from" id="flt_leave_from" class="input-text full-width" placeholder="city, distirct or specific airpot" />
+                                            <input list="origins" name = "flights_leaving_from" id="flt_leave_from" class="input-text full-width" placeholder="" style="font-size:25px;" maxlength="3"/>
+                                            <datalist id="origins">
+                                                <option value="CPT" label="Cape Town">
+                                                <option value="JNB" label="Johannesburg">
+                                            </datalist>
                                         </div>
                                         <div class="form-group">
                                             <label>Going To</label>
-                                            <input type="text" name = "flights_going_to" id="flt_go_to" class="input-text full-width" placeholder="city, distirct or specific airpot" />
+                                            <input list="dests" name = "flights_going_to" id="flt_go_to" class="input-text full-width" placeholder="" style="font-size:25px;" maxlength="3"/>
+                                            <datalist id="dests">
+                                                <option value="CPT" label="Cape Town">
+                                                <option value="JNB" label="Johannesburg">
+                                            </datalist>
                                         </div>
-                                        <center><div id="flt_request_result_where"></div></center><!--Form Error Popup-->
+                                        <center><div class="alert alert-info" id="flt_request_result_where" style="text-align:center;font-size:15px;display:none;">Missing origin/destination</div></center><!--Form Error Popup-->
                                     </div>
                                     
                                     <div class="col-md-4">
-                                        <h4 class="title">When</h4>
-                                        <label>Departing On</label>
-                                        <div class="form-group row">
-                                            <div class="col-xs-6">
-                                                <div class="datepicker-wrap">
-                                                    <input type="text" name="flights_departing_on" id="flt_dep_on" class="input-text full-width" placeholder="mm/dd/yy" />
-                                                </div>
+                                        <div class="row">
+                                            <div class="column">
+                                                <h4 class="title">WHEN
+                                                    <i class="fa fa-calendar"></i>
+                                                </h4>
                                             </div>
-                                            <div class="col-xs-6">
-                                                <div class="selector">
-                                                    <select class="full-width">
-                                                        <option value="1">anytime</option>
-                                                        <option value="2">morning</option>
-                                                    </select>
-                                                </div>
+                                            <div class="column">
+                                                <a class="button btn-mini stop" animation-type:"bounce" animation-duration:"2" id="one-way-btn">One Way Trip</a>
+                                            </div>
+                                            <div class="column">
+                                                <a class="button btn-mini stop" animation-type:"bounce" animation-duration:"2" id="return-btn">Return Trip</a>
                                             </div>
                                         </div>
-                                        <label>Arriving On</label>
-                                        <div class="form-group row">
-                                            <div class="col-xs-6">
+                                        <div id="depart-date-panel" style="display:none">
+                                            <div class="form-group row">
+                                                <label style="text-align:left">Departing On</label>
                                                 <div class="datepicker-wrap">
-                                                    <input type="text" name="flights_arriving_on" id="flt_arr_on" class="input-text full-width" placeholder="mm/dd/yy" />
+                                                    <input type="text" name="flights_departing_on" id="flt_outbound_date" class="input-text full-width" placeholder="mm/dd/yy" style="font-size:20px;"/>
                                                 </div>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <div class="selector">
-                                                    <select class="full-width">
-                                                        <option value="1">anytime</option>
-                                                        <option value="2">morning</option>
-                                                    </select>
+                                                <!--
+                                                <div class="col-xs-6">
+                                                    <div class="selector">
+                                                        <select class="full-width">
+                                                            <option value="1">anytime</option>
+                                                            <option value="2">morning</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
+                                                -->
                                             </div>
                                         </div>
-                                        <center><div id="flt_request_result_when"></div></center><!--Form Error Popup-->
+                                        <div id="return-date-panel" style="display:none">
+                                            <label  style="text-align:left">Returning On</label>
+                                            <div class="form-group row">
+                                                <div class="datepicker-wrap">
+                                                    <input type="text" name="flights_arriving_on" id="flt_inbound_date" class="input-text full-width" placeholder="mm/dd/yy" style="font-size:20px;"/>
+                                                </div>
+                                                <!--
+                                                <div class="col-xs-6">
+                                                    <div class="selector">
+                                                        <select class="full-width">
+                                                            <option value="1">anytime</option>
+                                                            <option value="2">morning</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                -->
+                                            </div>
+                                        </div>
+                                        <center><div class="alert alert-info" id="flt_request_result_when" style="text-align:center;font-size:15px;display:none;">Missing departure/arrival date</div></center><!--Form Error Popup-->
                                     </div>
                                     
                                     <div class="col-md-4">
-                                        <h4 class="title">Who</h4>
+                                        <h4 class="title tooltip1">WHO
+                                             <i class="fa fa-info-circle"></i>
+                                             <span class="tooltiptext1"><small>Adult:>12yrs</small><br /><small>Kids:>2yrs</small><br /><small>Infants:2yrs</small></span>
+                                        </h4>
                                         <div class="form-group row">
                                             <div class="col-xs-3">
                                                 <label>Adults</label>
-                                                <div class="selector">
-                                                    <select class="full-width">
+                                                <div class="selector" style="font-size:20px;">
+                                                    <select id="adults_no" name="adults" class="full-width" style="font-size:20px;">
+                                                        <option value="0">0</option>
                                                         <option value="1">01</option>
                                                         <option value="2">02</option>
                                                         <option value="3">03</option>
@@ -915,8 +978,9 @@
                                             </div>
                                             <div class="col-xs-3">
                                                 <label>Kids</label>
-                                                <div class="selector">
-                                                    <select class="full-width">
+                                                <div class="selector" style="font-size:20px;">
+                                                    <select  id="kids_no" name="kids" class="full-width" style="font-size:20px;">
+                                                        <option value="0">0</option>
                                                         <option value="1">01</option>
                                                         <option value="2">02</option>
                                                         <option value="3">03</option>
@@ -926,14 +990,15 @@
                                             </div>
                                             <div class="col-xs-6">
                                                 <label>Promo Code</label>
-                                                <input type="text" class="input-text full-width" placeholder="type here" />
+                                                <input id="promo" name="promo_code" type="text" class="input-text full-width" placeholder="" style="font-size:25px;" maxlength="3"/>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-xs-3">
                                                 <label>Infants</label>
-                                                <div class="selector">
-                                                    <select class="full-width">
+                                                <div class="selector" style="font-size:20px;">
+                                                    <select  id="infants_no" name="infants" class="full-width" style="font-size:20px;">
+                                                        <option value="0">0</option>
                                                         <option value="1">01</option>
                                                         <option value="2">02</option>
                                                         <option value="3">03</option>
@@ -943,14 +1008,15 @@
                                             </div>
                                             <div class="col-xs-6 pull-right">
                                                 <label>&nbsp;</label>
-                                                <button class="full-width icon-check">SERACH NOW</button>
+                                                <button class="full-width icon-check">SEARCH NOW</button>
                                             </div>
                                         </div>
+                                        <center><div class="alert alert-info" id="flt_request_result_pax" style="text-align:center;font-size:15px;display:none;">No passengers selected</div></center><!--Form Error Popup-->
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        
+                        <!--
                         <div class="tab-pane fade" id="flight-and-hotel-tab">
                             <form action="/flight-list" method="post">
                                 <div class="row">
@@ -1053,6 +1119,7 @@
                                 </div>
                             </form>
                         </div>
+                        -->
                         <!--
                         <div class="tab-pane fade" id="cars-tab">
                             <form action="car-list-view.html" method="post">
@@ -1329,6 +1396,7 @@
             </div>
             
             <!-- Popuplar Destinations -->
+            <!--
             <div class="destinations section">
                 <div class="container">
                     <h2>Popular Destinations</h2>
@@ -1380,6 +1448,7 @@
                     </div>
                 </div>
             </div>
+            -->
             
             <!-- Honeymoon -->
             <!--
@@ -1491,10 +1560,12 @@ Nullam placerat lacinia dolor quis pretium. Phasellus vitae lacinia quam, at pel
                 </div>
             </div>
             -->
-            <!-- Features section -->
+            <!--
+            Features section 
             <div class="features section global-map-area parallax" data-stellar-background-ratio="0.5">
                 <div class="container">
                     <div class="row image-box style7">
+                        
                         <div class="col-sms-6 col-sm-6 col-md-3">
                             <article class="box">
                                 <figure class="middle-block">
@@ -1554,12 +1625,14 @@ Nullam placerat lacinia dolor quis pretium. Phasellus vitae lacinia quam, at pel
                     </div>
                 </div>
             </div>
+            -->
         </section>
         
         <footer id="footer">
             <div class="footer-wrapper">
                 <div class="container">
                     <div class="row">
+                    <!--
                         <div class="col-sm-6 col-md-3">
                             <h2>Discover</h2>
                             <ul class="discover triangle hover row">
@@ -1616,14 +1689,15 @@ Nullam placerat lacinia dolor quis pretium. Phasellus vitae lacinia quam, at pel
                             <br />
                             <span>We respect your privacy</span>
                         </div>
+                        -->
                         <div class="col-sm-6 col-md-3">
-                            <h2>About Travelo</h2>
+                            <h2>About Lift Airlines</h2>
                             <p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massaidp nequetiam lore elerisque.</p>
                             <br />
                             <address class="contact-details">
                                 <span class="contact-phone"><i class="soap-icon-phone"></i> 1-800-123-HELLO</span>
                                 <br />
-                                <a href="#" class="contact-email">help@travelo.com</a>
+                                <a href="#" class="contact-email">help@lift.co.za</a>
                             </address>
                             <ul class="social-icons clearfix">
                                 <li class="twitter"><a title="twitter" href="#" data-toggle="tooltip"><i class="soap-icon-twitter"></i></a></li>
@@ -1639,18 +1713,20 @@ Nullam placerat lacinia dolor quis pretium. Phasellus vitae lacinia quam, at pel
                 </div>
             </div>
             <div class="bottom gray-area">
-                <div class="container">
+                <div class="container" style="background:#ffc30d">
                     <div class="logo pull-left">
                         <a href="index.html" title="Travelo - home">
-                            <img src="{{baseUrl}}/{{logo1.png}}" alt="Travelo HTML5 Template" />
+                            <img src="{{baseUrl}}/Lift2.jpg" alt="" />
                         </a>
                     </div>
                     <div class="pull-right">
                         <a id="back-to-top" href="#" class="animated" data-animation-type="bounce"><i class="soap-icon-longarrow-up circle"></i></a>
                     </div>
+                    <!--
                     <div class="copyright pull-right">
                         <p>&copy; 2014 Travelo</p>
                     </div>
+                    -->
                 </div>
             </div>
         </footer>

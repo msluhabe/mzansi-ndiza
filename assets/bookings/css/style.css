@@ -6806,7 +6806,7 @@ ul.check-circle li:before {
 }
 
 #header .logo a, #footer .logo a, .chaser .logo a {
-  background: url("../images/logo1.png") no-repeat 0 0;
+  background: url("../images/Lift2.jpg") no-repeat 0 0;
   display: block;
 }
 #header .logo img, #footer .logo img, .chaser .logo img {
@@ -7558,8 +7558,8 @@ ul.menu.mini li:hover a, ul.menu.mini li.active a {
 .no-backgroundsize .chaser .logo a {
   background-size: auto 20px;
   background-image: none;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/logo1.png', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/logo1.png', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/Lift2.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/Lift2.jpg', sizingMethod='scale')";
 }
 
 /* 3.2.0. Sign up & Login box */
@@ -8831,7 +8831,8 @@ ul.search-tabs li.active a {
 }
 
 #hotel-description .intro, #hotel-reviews .intro, #hotel-write-review .intro, #car-details .intro, #flight-details .intro, #cruise-description .intro, #cruise-reviews .intro, #cruise-write-review .intro, #travel-guide .intro, #tour-details .intro {
-  background: #f5f5f5;
+  /*background: #f5f5f5;*/
+  background: #fdb714;
 }
 #hotel-description .intro.table-wrapper, #hotel-reviews .intro.table-wrapper, #hotel-write-review .intro.table-wrapper, #car-details .intro.table-wrapper, #flight-details .intro.table-wrapper, #cruise-description .intro.table-wrapper, #cruise-reviews .intro.table-wrapper, #cruise-write-review .intro.table-wrapper, #travel-guide .intro.table-wrapper, #tour-details .intro.table-wrapper {
   padding: 0;

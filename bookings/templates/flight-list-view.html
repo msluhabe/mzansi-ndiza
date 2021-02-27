@@ -5,6 +5,7 @@
 <!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
 <!--[if gt IE 9]><!-->  <html> <!--<![endif]-->
 <head>
+
     <!-- Page Title -->
     <title>Travelo - Travel, Tour Booking HTML5 Template</title>
     
@@ -16,9 +17,25 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+    <!--Java Scripts-->
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    -->
+    <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.noconflict.js' %}"></script>
+
+    <!--<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>-->
+    <script type="text/javascript" src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+
+    <script type="text/javascript" src="{% static 'js/myjs-flight-list-view.js' %}"></script>
+  
     
     <!-- Theme Styles -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
@@ -28,6 +45,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'components/revolution_slider/css/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'components/jquery.bxslider/jquery.bxslider.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'components/flexslider/flexslider.css' %}">
+
     
     <!-- Main Style -->
     <link id="main-style" rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -39,7 +57,7 @@
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     
     <!-- Responsive Styles -->
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">  
     
     <!-- CSS for IE -->
     <!--[if lte IE 9]>
@@ -52,15 +70,18 @@
       <script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
     <![endif]-->
+    
+    
 </head>
 <body>
-    
+<div id="dummy" style="display:none;"></div>
     <div id="page-wrapper">
         <header id="header" class="navbar-static-top">
             <div class="topnav hidden-xs">
                 <div class="container">
                     <ul class="quick-menu pull-left">
                         <li><a href="#">MY ACCOUNT</a></li>
+                        <!--
                         <li class="ribbon">
                             <a href="#">English</a>
                             <ul class="menu mini">
@@ -79,10 +100,12 @@
                                 <li><a href="#" title="Svenska">Svenska</a></li>
                             </ul>
                         </li>
+                        -->
                     </ul>
                     <ul class="quick-menu pull-right">
                         <li><a href="#travelo-login" class="soap-popupbox">LOGIN</a></li>
                         <li><a href="#travelo-signup" class="soap-popupbox">SIGNUP</a></li>
+                        <!--
                         <li class="ribbon currency">
                             <a href="#" title="">USD</a>
                             <ul class="menu mini">
@@ -101,10 +124,11 @@
                                 <li><a href="#" title="IDR">IDR</a></li>
                             </ul>
                         </li>
+                        -->
                     </ul>
                 </div>
             </div>
-            
+
             <div class="main-header">
                 
                 <a href="#mobile-menu-01" data-toggle="collapse" class="mobile-menu-toggle">
@@ -112,14 +136,16 @@
                 </a>
 
                 <div class="container">
+                <!--
                     <h1 class="logo navbar-brand">
                         <a href="index.html" title="Travelo - home">
-                            <img src="{{baseUrl}}/{{logo1.png}}" alt="Travelo HTML5 Template" />
+                            <img src="{{baseUrl}}/Lift2.jpg" alt="Travelo HTML5 Template" />
                         </a>
                     </h1>
-                    
+                    -->
                     <nav id="main-menu" role="navigation">
                         <ul class="menu">
+                        <!--
                             <li class="menu-item-has-children">
                                 <a href="index.html">Home</a>
                                 <ul>
@@ -136,6 +162,8 @@
                                     <li><a href="homepage11.html">Home Layout 11</a></li>
                                 </ul>
                             </li>
+                            -->
+                            <!--
                             <li class="menu-item-has-children">
                                 <a href="hotel-index.html">Hotels</a>
                                 <ul>
@@ -148,6 +176,7 @@
                                     <li><a href="hotel-thankyou.html">Thank You</a></li>
                                 </ul>
                             </li>
+                            
                             <li class="menu-item-has-children">
                                 <a href="flight-index.html">Flights</a>
                                 <ul>
@@ -155,11 +184,12 @@
                                     <li><a href="flight-list-view.html">List View</a></li>
                                     <li><a href="flight-grid-view.html">Grid View</a></li>
                                     <li><a href="flight-block-view.html">Block View</a></li>
-                                    <li><a href="flight-detailed.html">Detailed</a></li>
+                                    <li><a href="/flight-detailed">Detailed</a></li>
                                     <li><a href="flight-booking.html">Booking</a></li>
                                     <li><a href="flight-thankyou.html">Thank You</a></li>
                                 </ul>
                             </li>
+                            
                             <li class="menu-item-has-children">
                                 <a href="car-index.html">Cars</a>
                                 <ul>
@@ -353,6 +383,7 @@
                                     </li>
                                 </ul>
                             </li>
+                            -->
                         </ul>
                     </nav>
                 </div>
@@ -361,7 +392,7 @@
                     <ul id="mobile-primary-menu" class="menu">
                         <li class="menu-item-has-children">
                             <a href="index.html">Home</a>
-                            <ul>
+                            <!--<ul>
                                 <li><a href="index.html">Home Layout 1</a></li>
                                 <li><a href="homepage2.html">Home Layout 2</a></li>
                                 <li><a href="homepage3.html">Home Layout 3</a></li>
@@ -374,7 +405,9 @@
                                 <li><a href="homepage10.html">Home Layout 10</a></li>
                                 <li><a href="homepage11.html">Home Layout 11</a></li>
                             </ul>
+                            -->
                         </li>
+                        <!--
                         <li class="menu-item-has-children">
                             <a href="hotel-index.html">Hotels</a>
                             <ul>
@@ -387,6 +420,7 @@
                                 <li><a href="hotel-thankyou.html">Thank You</a></li>
                             </ul>
                         </li>
+                        
                         <li class="menu-item-has-children">
                             <a href="flight-index.html">Flights</a>
                             <ul>
@@ -394,11 +428,12 @@
                                 <li><a href="flight-list-view.html">List View</a></li>
                                 <li><a href="flight-grid-view.html">Grid View</a></li>
                                 <li><a href="flight-block-view.html">Block View</a></li>
-                                <li><a href="flight-detailed.html">Detailed</a></li>
+                                <li><a href="/flight-detailed">Detailed</a></li>
                                 <li><a href="flight-booking.html">Booking</a></li>
                                 <li><a href="flight-thankyou.html">Thank You</a></li>
                             </ul>
                         </li>
+                       
                         <li class="menu-item-has-children">
                             <a href="car-index.html">Cars</a>
                             <ul>
@@ -588,6 +623,7 @@
                                 </li>
                             </ul>
                         </li>
+                        -->
                     </ul>
                     
                     <ul class="mobile-topnav container">
@@ -705,6 +741,15 @@
                 <p>Don't have an account? <a href="#travelo-signup" class="goto-signup soap-popupbox">Sign up</a></p>
             </div>
         </header>
+        <!-- progressbar -->
+        <div class="container">
+            <ul id="progressbar">
+                <li class="active">Date</li>
+                <li class="active">Flight + Extras</li>
+                <li>Payment</li>
+            </ul>
+        </div>
+        <!---->
         <div class="page-title-container">
             <div class="container">
                 <div class="page-title pull-left">
@@ -721,8 +766,9 @@
                 <div id="main">
                     <div class="row">
                         <div class="col-sm-4 col-md-3">
-                            <h4 class="search-results-title"><i class="soap-icon-search"></i><b>1,984</b> results found.</h4>
+                            <h4 class="search-results-title"  style="background:#ffcc00"><b>Refine Flight</b></h4>
                             <div class="toggle-container filters-container">
+                                <!--
                                 <div class="panel style1 arrow-right">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" href="#price-filter" class="collapsed">Price</a>
@@ -734,10 +780,11 @@
                                             <span class="min-price-label pull-left"></span>
                                             <span class="max-price-label pull-right"></span>
                                             <div class="clearer"></div>
-                                        </div><!-- end content -->
+                                        </div>
                                     </div>
                                 </div>
-                                
+                                -->
+                                <!--    
                                 <div class="panel style1 arrow-right">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" href="#flight-times-filter" class="collapsed">Flight Times</a>
@@ -749,10 +796,11 @@
                                             <span class="start-time-label pull-left"></span>
                                             <span class="end-time-label pull-right"></span>
                                             <div class="clearer"></div>
-                                        </div><!-- end content -->
+                                        </div>
                                     </div>
                                 </div>
-                                
+                                -->
+                                <!--
                                 <div class="panel style1 arrow-right">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" href="#flight-stops-filter" class="collapsed">Flight Stops</a>
@@ -769,7 +817,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                                -->
+                                <!--
                                 <div class="panel style1 arrow-right">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" href="#airlines-filter" class="collapsed">Airlines</a>
@@ -789,10 +838,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                                -->
+                                <!--
                                 <div class="panel style1 arrow-right">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#flight-type-filter" class="collapsed">Flight Type</a>
+                                        <a data-toggle="collapse" href="#flight-type-filter" class="collapsed">Travel Class</a>
                                     </h4>
                                     <div id="flight-type-filter" class="panel-collapse collapse">
                                         <div class="panel-content">
@@ -806,50 +856,323 @@
                                         </div>
                                     </div>
                                 </div>
+                                -->
 
-                                <div class="panel style1 arrow-right">
+                                <div class="panel style1 arrow-right" style="background:#ffcc00">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#inflight-experience-filter" class="collapsed">Inflight Experience</a>
+                                    <a id="inflight-experience" data-toggle="collapse" href="#inflight-experience-filter" class="collapsed">Extras</a>
+                                        <!--<a id="inflight-experience" href="#inflight-experience-filter">Extras</a>-->
                                     </h4>
                                     <div id="inflight-experience-filter" class="panel-collapse collapse">
-                                        <div class="panel-content">
-                                            <ul class="check-square filters-option">
-                                                <li><a href="#">Inflight Dining</a></li>
-                                                <li><a href="#">Music</a></li>
-                                                <li class="active"><a href="#">Sky Shopping</a></li>
-                                                <li><a href="#">Wi-fi</a></li>
-                                                <li><a href="#">Seats &amp; Cabin</a></li>
+                                        <div class="panel-content" style="background:#ffcc00">
+                                            <ul id="extras-menu" class="filters-option"> 
+                                                <li style="background:#ffcc00">
+                                                    <div class="tooltip1">
+                                                        <a data-toggle="collapse" id="refund-ticket-choice" href="#refund-ticket-options" class="collapsed">
+                                                            <b>Refundable Ticket</b>
+                                                            <i class="fa fa-arrow-left"></i>
+                                                        </a>
+                                                        <span class="tooltiptext1">Refundable Ticket</span>
+                                                    </div>
+                                                    <div id="refund-ticket-options" class="panel-collapse collapse">
+                                                        <ul class="check-square filters-option">
+                                                            {% if adult_chck %}
+                                                                {% with ''|center:adult_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Adult {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                            {% if kids_chck %}
+                                                                {% with ''|center:kids_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Kid {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                            {% if infant_chck %}
+                                                                {% with ''|center:infant_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Infant {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                        </ul>
+                                                        <!--<button class="icon-check full-width" id="select-refund-ticket">Ticket refund selection</button>-->
+                                                        <a class="button icon-check" id="select-refund-ticket">Ticket Refund</a>
+                                                        <br />
+                                                    </div>
+                                                </li>
+                                                <br />
+                                                <li style="background:#ffcc00">
+                                                    <div class="tooltip1">
+                                                        <a data-toggle="collapse" id="cancell-ticket-choice" href="#cancell-ticket-options" class="collapsed">
+                                                            <b>Cancellable Ticket</b>
+                                                            <i class="fa fa-arrow-left"></i>
+                                                        </a>
+                                                        <span class="tooltiptext1">Cancellable Ticket</span>
+                                                    </div>
+                                                    <div id="cancell-ticket-options" class="panel-collapse collapse">
+                                                        <ul class="check-square filters-option">
+                                                            {% if adult_chck %}
+                                                                {% with ''|center:adult_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Adult {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                            {% if kids_chck %}
+                                                                {% with ''|center:kids_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Kid {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                            {% if infant_chck %}
+                                                                {% with ''|center:infant_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Infant {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                        </ul>
+                                                        <a class="button icon-check" id="select-cancell-ticket">Ticket Cancell</a>
+                                                    </div>
+                                                </li>
+                                                <br />
+                                                <li style="background:#ffcc00">
+                                                    <div class="tooltip1">
+                                                        <a data-toggle="collapse" id="change-ticket-choice" href="#change-ticket-options" class="collapsed">
+                                                            <b>Changeable Ticket</b>
+                                                            <i class="fa fa-arrow-left"></i>
+                                                        </a>
+                                                        <span class="tooltiptext1">Changeable Ticket</span>
+                                                    </div>
+                                                    <div id="change-ticket-options" class="panel-collapse collapse">
+                                                        <ul class="check-square filters-option">
+                                                            {% if adult_chck %}
+                                                                {% with ''|center:adult_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Adult {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                            {% if kids_chck %}
+                                                                {% with ''|center:kids_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Kid {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                            {% if infant_chck %}
+                                                                {% with ''|center:infant_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Infant {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                        </ul>
+                                                        <a class="button icon-check" id="select-change-ticket">Ticket Change</a>
+                                                    </div>
+                                                </li>
+                                                <br />
+                                                <li style="background:#ffcc00">
+                                                    <div class="tooltip1">
+                                                        <a data-toggle="collapse" id="extra-bag-choice" href="#extra-bag-options" class="collapsed">
+                                                            <b>Extra Baggage</b>
+                                                            <i class="fa fa-arrow-left"></i>
+                                                        </a>
+                                                        <span class="tooltiptext1">Extra Baggage</span>
+                                                    </div>
+                                                    <div id="extra-bag-options" class="panel-collapse collapse">
+                                                        <ul class="check-square filters-option">
+                                                            {% if adult_chck %}
+                                                                {% with ''|center:adult_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Adult {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                            {% if kids_chck %}
+                                                                {% with ''|center:kids_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Kid {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                            {% if infant_chck %}
+                                                                {% with ''|center:infant_pax as range %}
+                                                                    {% for i in range %}
+                                                                        <li style="background:#ffc30d"><a href="#">Infant {{forloop.counter}}</a></li>
+                                                                    {% endfor %}
+                                                                {% endwith %}
+                                                            {% endif %}
+                                                        </ul>  
+                                                        <a class="button icon-check" id="select-extra-bag">Extra Bag</a>
+                                                    </div>
+                                                </li>
+                                                <br />
+                                                <li style="background:#ffcc00">
+                                                    <div class="tooltip1">
+                                                        <a data-toggle="modal" id="seat-choice" href="#myModal">
+                                                            <b>Seat Priority</b>
+                                                            <i class="fa fa-arrow-left"></i>
+                                                        </a>
+                                                        <span class="tooltiptext1">Seat Priority</span>
+                                                    </div>
+                                                </li>
                                             </ul>
-                                            <a class="button btn-mini">MORE</a>
+                                            <button class="icon-check full-width" id="select-extras-done">Extras Done</button>
                                         </div>
                                     </div>
                                 </div>
+                                <!--My modal for cabin seat selection-->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Seat selection</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div id="cabin-seat-map" class="grid-container">
+                                                    {% with ''|center:31 as range %}
+                                                        {% for i in range %}
+                                                            {% if forloop.counter <= 11 %}
+                                                                <div id="grid-item-{{forloop.counter}}A" class="grid-item" style="cursor: default;">{{forloop.counter}}A</div>
+                                                                <div id="grid-item-{{forloop.counter}}B" class="grid-item" style="cursor: default;">{{forloop.counter}}B</div>
+                                                                <div id="grid-item-{{forloop.counter}}C" class="grid-item" style="cursor: default;">{{forloop.counter}}C</div>
+                                                                <div class="grid-item" style="cursor: default;">|</div>  
+                                                                <div id="grid-item-{{forloop.counter}}D" class="grid-item" style="cursor: default;">{{forloop.counter}}D</div>
+                                                                <div id="grid-item-{{forloop.counter}}E" class="grid-item" style="cursor: default;">{{forloop.counter}}E</div>
+                                                                <div id="grid-item-{{forloop.counter}}F" class="grid-item" style="cursor: default;">{{forloop.counter}}F</div>
+                                                            {%elif forloop.counter == 12 or forloop.counter == 14 %}
+                                                                <div class="grid-item" style="cursor: default;">EXIT</div>
+                                                                <div class="grid-item" style="cursor: default;"></div>
+                                                                <div class="grid-item" style="cursor: default;"></div>
+                                                                <div class="grid-item" style="cursor: default;">|</div>  
+                                                                <div class="grid-item" style="cursor: default;"></div>
+                                                                <div class="grid-item" style="cursor: default;"></div>
+                                                                <div class="grid-item" style="cursor: default;">EXIT</div> 
+                                                            {% elif forloop.counter == 13 %}
+                                                                <div id="grid-item-{{forloop.counter}}A" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-1"}}A</div>
+                                                                <div id="grid-item-{{forloop.counter}}B" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-1"}}B</div>
+                                                                <div id="grid-item-{{forloop.counter}}C" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-1"}}C</div>
+                                                                <div class="grid-item" style="cursor: default;">|</div>  
+                                                                <div id="grid-item-{{forloop.counter}}D" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-1"}}D</div>
+                                                                <div id="grid-item-{{forloop.counter}}E" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-1"}}E</div>
+                                                                <div id="grid-item-{{forloop.counter}}F" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-1"}}F</div>
+                                                            {% else %}
+                                                                <div id="grid-item-{{forloop.counter}}A" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-2"}}A</div>
+                                                                <div id="grid-item-{{forloop.counter}}B" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-2"}}B</div>
+                                                                <div id="grid-item-{{forloop.counter}}C" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-2"}}C</div>
+                                                                <div class="grid-item" style="cursor: default;">|</div>  
+                                                                <div id="grid-item-{{forloop.counter}}D" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-2"}}D</div>
+                                                                <div id="grid-item-{{forloop.counter}}E" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-2"}}E</div>
+                                                                <div id="grid-item-{{forloop.counter}}F" class="grid-item" style="cursor: default;">{{forloop.counter|add:"-2"}}F</div> 
+                                                            {%endif%}
+                                                        {%endfor%}
+                                                    {%endwith%}
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button id="select-prior-seat" class="button icon-check" data-dismiss="modal">Seat selection</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                                       
                                 
-                                <div class="panel style1 arrow-right">
+                                <div class="panel style1 arrow-right"  style="background:#ffcc00">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" href="#modify-search-panel" class="collapsed">Modify Search</a>
                                     </h4>
                                     <div id="modify-search-panel" class="panel-collapse collapse">
                                         <div class="panel-content">
-                                            <form method="post">
+                                            <form id="flt_request_form"  method="post">
                                                 {% csrf_token %}
                                                 <div class="form-group">
                                                     <label>Leaving from</label>
-                                                    <input type="text" class="input-text full-width" placeholder="" value="city, district, or specific airpot" />
+                                                    <input list="origins" name = "flights_leaving_from" id="flt_leave_from" class="input-text full-width" placeholder="" />
+                                                    <datalist id="origins">
+                                                        <option value="CPT" label="Cape Town">
+                                                        <option value="JNB" label="Johannesburg">
+                                                    </datalist>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Departure on</label>
-                                                    <div class="datepicker-wrap">
-                                                        <input type="text" name="date_from" class="input-text full-width" placeholder="mm/dd/yy" />
+                                                    <label>Going To</label>
+                                                    <input list="dests" name = "flights_going_to" id="flt_go_to" class="input-text full-width" placeholder="" />
+                                                    <datalist id="dests">
+                                                        <option value="CPT" label="Cape Town">
+                                                        <option value="JNB" label="Johannesburg">
+                                                    </datalist>
+                                                </div>
+                                                <!--<div class="form-group">-->
+                                                    <div class="row">
+                                                        <div class="col-sm-4" style="width: 50%;"><a class="button btn-mini stop" id="one-way-btn">One Way Trip</a></div>
+                                                        <div class="col-sm-2" style="width: 50%;"><a class="button btn-mini stop" id="return-btn">Return Trip</a></div>
+                                                    </div>
+                                                <!--</div>-->
+                                                <div class="form-group">
+                                                    <div id="depart-date-panel" style="dislay:none">
+                                                        <label>Departure on</label>
+                                                        <div class="datepicker-wrap">
+                                                            <input type="text" name="flights_departing_on" id="flt_outbound_date" class="input-text full-width" placeholder="mm/dd/yy" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Arriving On</label>
-                                                    <div class="datepicker-wrap">
-                                                        <input type="text" name="date_to" class="input-text full-width" placeholder="mm/dd/yy" />
+                                                    <div id="return-date-panel">
+                                                        <label>Returning On</label>
+                                                        <div class="datepicker-wrap">
+                                                            <input type="text" name="flights_arriving_on" id="flt_inbound_date" class="input-text full-width" placeholder="mm/dd/yy" />
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <br />
+                                                <div class="form-group">
+                                                    <div id="adult-panel">
+                                                        <label>Adults</label>
+                                                        <div class="selector" style="font-size:20px;">
+                                                            <select id="adults_no" name="adults" class="full-width" style="font-size:20px;">
+                                                                <option value="0">0</option>
+                                                                <option value="1">01</option>
+                                                                <option value="2">02</option>
+                                                                <option value="3">03</option>
+                                                                <option value="4">04</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div id="kids-panel">
+                                                        <label>kids</label>
+                                                        <div class="selector" style="font-size:20px;">
+                                                            <select id="kids_no" name="kids" class="full-width" style="font-size:20px;">
+                                                                <option value="0">0</option>
+                                                                <option value="1">01</option>
+                                                                <option value="2">02</option>
+                                                                <option value="3">03</option>
+                                                                <option value="4">04</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div id="infant-panel">
+                                                        <label>Infants</label>
+                                                        <div class="selector" style="font-size:20px;">
+                                                            <select id="infants_no" name="infants" class="full-width" style="font-size:20px;">
+                                                                <option value="0">0</option>
+                                                                <option value="1">01</option>
+                                                                <option value="2">02</option>
+                                                                <option value="3">03</option>
+                                                                <option value="4">04</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="alert alert-info" id="flt_request_result_where" style="text-align:center;font-size:15px;display:none;text-align:left;">From/To?</div><!--Form Error Popup-->
+                                                <div class="alert alert-info" id="flt_request_result_when" style="text-align:center;font-size:15px;display:none;text-align:left;">Date?</div><!--Form Error Popup-->
                                                 <button class="btn-medium icon-check uppercase full-width">search again</button>
                                             </form>
                                         </div>
@@ -858,8 +1181,9 @@
                             </div>
                         </div>
                         <div class="col-sm-8 col-md-9">
+                            <!--
                             <div class="sort-by-section clearfix box">
-                                <h4 class="sort-by-title block-sm">Sort results by:</h4>
+                                <h4 class="sort-by-title block-sm"><b>Filter:</b></h4>
                                 <ul class="sort-bar clearfix block-sm">
                                     <li class="sort-by-name"><a class="sort-by-container" href="#"><span>name</span></a></li>
                                     <li class="sort-by-price"><a class="sort-by-container" href="#"><span>price</span></a></li>
@@ -878,59 +1202,531 @@
                                     </li>
                                 </ul>
                             </div>
+                            -->
 
-                            <div class="flight-list listing-style3 flight">
-                            {% for flt in flights%}
-                                <article class="box">
-                                    <figure class="col-xs-3 col-sm-2">
-                                        <span><img alt="" src="http://placehold.it/270x160"></span>
-                                    </figure>
+                            <!-- Modal content -->
+                                <div id="myModal2" class="modal1">
+                                    <div class="modal-content1" >
+                                        <div class="modal-header1">
+                                            <span class="close1">&times;</span>
+                                            <h2></h2>
+                                        </div>
+                                        <div class="modal-body1">
+                                            <h3>
+                                                <p id="p1" style="text-align:center"></p>
+                                            </h3>
+                                        </div>
+                                        <div class="modal-footer1">
+                                            <h3></h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <div class="flight-list listing-style3 flight" id="flt-list">
+                                {% if flights_out %}
+                                    <article class="box" style="border-radius:4px;background:#000">
+                                        <h4><strong style="color:#fff">Outgoing Flights</strong></h4>
+                                    </article>
+                                {% for flt in flights_out %}
+                                <article class="box outbound-list" style="border-radius:4px;border-color:#000;background:#ffcc00">
+                                    <!--<figure class="col-xs-3 col-sm-2">
+                                        <img alt="" src="{{flt.img.url}}"  style="width:95px;height:130px;">
+                                    </figure>-->
                                     <div class="details col-xs-9 col-sm-10">
-                                        <div class="details-wrapper">
+                                        <div id="outbound-details-wrapper" class="details-wrapper">
                                             <div class="first-row">
                                                 <div>
                                                     <h4 class="box-title">{{flt.orig}} to {{flt.dest}}<small>Oneway flight</small></h4>
-                                                    <a class="button btn-mini stop">1 STOP</a>
+                                                    <a class="button btn-mini stop">{{flt.flt_no}}</a>
                                                     <div class="amenities">
-                                                        <i class="soap-icon-wifi circle"></i>
-                                                        <i class="soap-icon-entertainment circle"></i>
-                                                        <i class="soap-icon-fork circle"></i>
-                                                        <i class="soap-icon-suitcase circle"></i>
+
+                                                        <div class="tooltip1">
+                                                            <i class="soap-icon-card circle"></i>
+                                                            <span class="tooltiptext1">Refundable ticket: +R{{flt.refundable_price}}</span>
+                                                        </div>
+                                                        
+                                                        <div class="tooltip1">
+                                                            <i class="soap-icon-liability circle"></i>
+                                                            <span class="tooltiptext1">Cancellable ticket: +R{{flt.cancellable_price}} </span>
+                                                        </div>
+
+                                                        <div class="tooltip1">
+                                                            <i class="soap-icon-stories circle"></i>
+                                                            <span class="tooltiptext1">Changeable ticket: +R{{flt.changeable_price}}</span>
+                                                        </div>
+
+                                                        <div class="tooltip1">
+                                                            <i class="soap-icon-carryon circle"></i>
+                                                            <span class="tooltiptext1">Extra baggage: +R{{flt.extrabag_price}}</span>
+                                                        </div>
+
+                                                        <div class="tooltip1">
+                                                            <i class="soap-icon-passenger circle"></i>
+                                                            <span class="tooltiptext1">Seat priority: +R{{flt.seatprior_price}}</span>
+                                                        </div>
+         
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <span class="price"><small>AVG/PERSON</small>R{{flt.flt_price}}</span>
+                                                    <span class="price"><small>AVG/PERSON</small><strong><small2>R </small2>{{flt.flt_price}}</strong></span>
                                                 </div>
                                             </div>
                                             <div class="second-row">
                                                 <div class="time">
                                                     <div class="take-off col-sm-4">
-                                                        <div class="icon"><i class="soap-icon-plane-right yellow-color"></i></div>
+                                                        <div class="icon"><i class="soap-icon-plane-right white-color"></i></div>
                                                         <div>
-                                                            <span class="skin-color">Take off</span><br />{{flt.dep_date|date:"D d M Y"}}<br />{{flt.dep_date|time:"H:i:a"}}
+                                                            <span class="skin-color">Take off</span><br />{{flt.dep_date|date:"D d M Y"}}<br /><div class="ftime">{{flt.dep_date|time:"H:i:a"}}</div>
                                                         </div>
                                                     </div>
                                                     <div class="landing col-sm-4">
-                                                        <div class="icon"><i class="soap-icon-plane-right yellow-color"></i></div>
+                                                        <div class="icon"><i class="soap-icon-plane-right white-color"></i></div>
                                                         <div>
-                                                            <span class="skin-color">landing</span><br />{{flt.arr_date|date:"D d M Y"}}<br />{{flt.arr_date|time:"H:i:a"}}
+                                                            <span class="skin-color">landing</span><br />{{flt.arr_date|date:"D d M Y"}}<br /><div class="ftime">{{flt.arr_date|time:"H:i:a"}}</div>
                                                         </div>
                                                     </div>
                                                     <div class="total-time col-sm-4">
-                                                        <div class="icon"><i class="soap-icon-clock yellow-color"></i></div>
+                                                        <div class="icon"><i class="soap-icon-clock white-color"></i></div>
                                                         <div>
-                                                            <span class="skin-color">total time</span><br />{{flt.flight_hrs}} hrs {{flt.flight_mins}} mins
+                                                            <span class="skin-color">total time</span><br />{{flt.flight_hrs}}H {{flt.flight_mins}}M
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="action">
-                                                    <a href="flight-detailed.html" class="button btn-small full-width">SELECT NOW</a>
+                                                    {% with counter_value=forloop.counter0|stringformat:"s" %} 
+                                                    <a id="select-base-booking-out-{{counter_value}}" class="button btn-small full-width" data-value={{flt.id}}>SELECT NOW</a>
+                                                    {% endwith %}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </article>
                                 {% endfor %}
+                                <!--passing hidden data from index page-->
+                                <input type="hidden" name="adults_no" id="adults_no" value={{adult_pax}}>
+                                <input type="hidden" name="kids_no" id="kids_no" value={{kids_pax}}>
+                                <input type="hidden" name="infants_no" id="infants_no" value={{infant_pax}}>
+                                {% else %}
+                                    <div class="alert alert-info" style="text-align:center;font-size:15px;">No outbound flights to display</div>
+                                {% endif %}
+                                <div class="tab-pane fade active in" id="flight-details" style="display:none">
+                                    <div class="intro table-wrapper full-width hidden-table-sm box">
+                                        <div class="col-md-4 table-cell travelo-box" style="border-radius:4px;background:rgb(255, 204, 0)">
+                                            <h3><b>Booking itenary</b></h3>
+                                            <dl class="term-description">
+                                            <!--Outbound-->
+                                                <div><br></div>
+                                                <div class="myTable">
+                                                    <table>
+                                                        <tbody>
+                                                                <caption style="color:#01b7f2">Outbound</caption>
+
+                                                            {% if adult_pax %}
+                                                            <div id="bkng-base-fare11">
+                                                                <tr>
+                                                                    <td>{{adult_pax}}x Adults</td><td id="bkng-base-fare-price1a">R0.00</td>
+                                                                <tr>
+                                                            </div>
+                                                            {% endif %}
+                                                            {% if kids_pax %}
+                                                            <div id="bkng-base-fare12">
+                                                                <tr>
+                                                                    <td>{{kids_pax}}x Kids</td><td id="bkng-base-fare-price1b">R0.00</td>
+                                                                <tr>
+                                                            </div>
+                                                            {% endif %}
+                                                            {% if infant_pax %}
+                                                            <div id="bkng-base-fare13">
+                                                                <tr>
+                                                                    <td>{{infant_pax}}x Infants</td><td id="bkng-base-fare-price1c">R0.00</td>
+                                                                <tr>
+                                                            </div>
+                                                            {% endif %}
+
+                                                                <tr id="bkng-refundable1" style="display:none">
+                                                                    <td>Refundable:</td><td id="bkng-refundable-price1"></td>
+                                                                </tr>
+                                                                <tr id="bkng-cancellable1" style="display:none">
+                                                                    <td>Cancellable:</td><td id="bkng-cancellable-price1"></td>
+                                                                </tr>
+                                                                <tr id="bkng-changeable1" style="display:none">
+                                                                    <td>Changeable:</td><td id="bkng-changeable-price1"></td>
+                                                                </tr>
+                                                                <tr id="bkng-extra-bag1" style="display:none">
+                                                                    <td>+Baggage:</td><td id="bkng-extra-bag-price1"></td>
+                                                                </tr>
+                                                                <tr id="bkng-seat-prior1" style="display:none">
+                                                                    <td>Seat Priority:</td><td id="bkng-seat-prior-price1"></td>
+                                                                </tr>
+                                                                 <tr id="bkng-base-taxes1">
+                                                                    <td>Taxes &amp; Fees:</td><td id="bkng-base-taxes-price1"></td>
+                                                                </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!--
+                                                <div><h6>Outbound Flight</h4></div>
+                                                {% if adult_pax %}
+                                                <div id="bkng-base-fare11"><dt>{{adult_pax}}x ADULTS:</dt><dd id="bkng-base-fare-price1a">R0.00</dd></div>
+                                                {% endif %}
+                                                {% if kids_pax %}
+                                                <div id="bkng-base-fareb12"><dt>{{kids_pax}}x KIDS:</dt><dd id="bkng-base-fare-price1b">R0.00</dd></div>
+                                                {% endif %}
+                                                {% if infant_pax %}
+                                                <div id="bkng-base-fare13"><dt>{{infant_pax}}x INFANTS:</dt><dd id="bkng-base-fare-price1c">R0.00</dd></div>
+                                                {% endif %}
+
+                                                <div id="bkng-refundable1" style="display:none"><dt>Refundable:</dt><dd id="bkng-refundable-price1"></dd></div>
+                                                <div id="bkng-cancellable1" style="display:none"><dt>Cancellable:</dt><dd id="bkng-cancellable-price1"></dd></div>
+                                                <div id="bkng-changeable1" style="display:none"><dt>Changeable:</dt><dd id="bkng-changeable-price1"></dd></div>
+                                                <div id="bkng-extra-bag1" style="display:none"><dt>+Baggage:</dt><dd id="bkng-extra-bag-price1"></dd></div>
+                                                <div id="bkng-seat-prior1" style="display:none"><dt>Seat Priority:</dt><dd id="bkng-seat-prior-price1"></dd></div>
+
+                                                <div id="bkng-base-taxes1"><dt>Taxes &amp; Fees:</dt><dd id="bkng-base-taxes-price1">R0.00</dd></div>
+                                                -->
+                                                <br />
+                                            <!--Inbound-->
+                                                <div id="inbound-summary" style="display:none"> 
+                                                <div class="myTable">
+                                                    <table>
+                                                        <tbody>
+                                                                <caption style="color:#01b7f2">Return</caption>
+
+                                                            {% if adult_pax %}
+                                                            <div id="bkng-base-fare21">
+                                                                <tr>
+                                                                    <td>{{adult_pax}}x Adults</td><td id="bkng-base-fare-price2a">R0.00</td>
+                                                                <tr>
+                                                            </div>
+                                                            {% endif %}
+                                                            {% if kids_pax %}
+                                                            <div id="bkng-base-fare22">
+                                                                <tr>
+                                                                    <td>{{kids_pax}}x Kids</td><td id="bkng-base-fare-price2b">R0.00</td>
+                                                                <tr>
+                                                            </div>
+                                                            {% endif %}
+                                                            {% if infant_pax %}
+                                                            <div id="bkng-base-fare23">
+                                                                <tr>
+                                                                    <td>{{infant_pax}}x Infants</td><td id="bkng-base-fare-price2c">R0.00</td>
+                                                                <tr>
+                                                            </div>
+                                                            {% endif %}
+
+                                                                <tr id="bkng-refundable2" style="display:none">
+                                                                    <td>Refundable:</td><td id="bkng-refundable-price2"></td>
+                                                                </tr>
+                                                                <tr id="bkng-cancellable2" style="display:none">
+                                                                    <td>Cancellable:</td><td id="bkng-cancellable-price2"></td>
+                                                                </tr>
+                                                                <tr id="bkng-changeable2" style="display:none">
+                                                                    <td>Changeable:</td><td id="bkng-changeable-price2"></td>
+                                                                </tr>
+                                                                <tr id="bkng-extra-bag2" style="display:none">
+                                                                    <td>+Baggage:</td><td id="bkng-extra-bag-price2"></td>
+                                                                </tr>
+                                                                <tr id="bkng-seat-prior2" style="display:none">
+                                                                    <td>Seat Priority:</td><td id="bkng-seat-prior-price2"></td>
+                                                                </tr>
+                                                                 <tr id="bkng-base-taxes2">
+                                                                    <td>Taxes &amp; Fees:</td><td id="bkng-base-taxes-price2"></td>
+                                                                </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                </div>
+                                                <!--    
+                                                    <div id="inbound-header"><h6>Return Flight</h4></div>
+                                                    {% if adult_pax %}
+                                                    <div id="bkng-base-fare21"><dt>{{adult_pax}}x ADULTS:</dt><dd id="bkng-base-fare-price2a">R0.00</dd></div>
+                                                    {% endif %}
+                                                    {% if kids_pax %}
+                                                    <div id="bkng-base-fare22"><dt>{{kids_pax}}x KIDS:</dt><dd id="bkng-base-fare-price2b">R0.00</dd></div>
+                                                    {% endif %}
+                                                    {% if infant_pax %}
+                                                    <div id="bkng-base-fare23"><dt>{{infant_pax}}x INFANTS:</dt><dd id="bkng-base-fare-price2c">R0.00</dd></div>
+                                                    {% endif %}
+
+                                                    <div id="bkng-base-taxes2"><dt>Taxes &amp; Fees:</dt><dd id="bkng-base-taxes-price2">R0.00</dd></div>
+
+                                                    <div id="bkng-refundable2" style="display:none"><dt>Refundable:</dt><dd id="bkng-refundable-price2"></dd></div>
+                                                    <div id="bkng-cancellable2" style="display:none"><dt>Cancellable:</dt><dd id="bkng-cancellable-price2"></dd></div>
+                                                    <div id="bkng-changeable2" style="display:none"><dt>Changeable:</dt><dd id="bkng-changeable-price2"></dd></div>
+                                                    <div id="bkng-extra-bag2" style="display:none"><dt>+Baggage:</dt><dd id="bkng-extra-bag-price2"></dd></div>
+                                                    <div id="bkng-seat-prior2" style="display:none"><dt>Seat Priority:</dt><dd id="bkng-seat-prior-price2"></dd></div>
+                                                    
+                                                </div>
+                                                <div>------------------------------------</div>
+                                                <div></div>
+                                                -->
+                                                <br />
+
+                                                <div id="bkng-total">
+                                                    <table class='myTable'>
+                                                        <tbody>
+                                                            <td>total price:</td><td id="bkng-total-price">R0.00</td>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            
+                                
+                                            </dl>
+
+                                            <div><br><br></div>
+                                            <button class="btn-medium icon-check uppercase full-width" id="edit-bkng">Edit my booking</button>
+                                            <div><br></div>
+                                            <button class="btn-medium icon-check uppercase full-width" id="proceed-to-chck-out">Procced to checkout</button>
+
+                                        </div>
+                                        <div class="col-md-8 table-cell travelo-box" style="border-radius:4px;background:rgb(255,204,0)">
+                                            <div class="detailed-features booking-details" style="border-radius:4px;background:rgb(255,204,0)">
+                                                <div class="travelo-box" style="border-radius:4px;background:rgb(255,204,0)">
+                                                    <!--<a href="#" class="button btn-mini yellow pull-right">1 STOP</a>-->
+                                                    <h4 class="box-title" id="box-tittle-summary-out"></h4>
+                                                </div>
+                                                <div class="table-wrapper flights">
+                                                    <div class="table-row first-flight">
+                                                        <div class="table-cell logo" id="table-cell-flight-no1" style="background:rgb(255,204,0)">
+                                                            <!--<img src="http://placehold.it/140x30" alt="">-->
+                                                            <label style="font-weight:bold"></label>
+                                                        </div>
+                                                        <div class="table-cell timing-detail" style="background:rgb(255,204,0)">
+                                                            <div class="timing">
+                                                                <div class="check-in" id="check-in-time1">
+                                                                    <label>take off</label>
+                                                                    <span></span>
+                                                                </div>
+                                                                <div class="duration text-center" id="duration-time1">
+                                                                    <i class="soap-icon-clock "></i>
+                                                                    <span></span>
+                                                                </div>
+                                                                <div class="check-out" id="check-out-time1">
+                                                                    <label>landing</label>
+                                                                    <span></span>
+                                                                </div>
+                                                            </div>
+                                                            <!--<label class="layover">Layover : 3h 50m</label>-->
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-row second-flight" id="return-summary" style="display:none;background:rgb(255,204,0)">
+                                                        <div class="table-cell logo" id="table-cell-flight-no2" style="background:rgb(255,204,0)">
+                                                            <!--<img src="http://placehold.it/140x30" alt="">-->
+                                                            <label style="font-weight:bold"></label>
+                                                        </div>
+                                                        <div class="table-cell timing-detail" style="background:rgb(255,204,0)">
+                                                            <div class="timing">
+                                                                <div class="check-in" id="check-in-time2">
+                                                                    <label>take off</label>
+                                                                    <span></span>
+                                                                </div>
+                                                                <div class="duration text-center" id="duration-time2">
+                                                                    <i class="soap-icon-clock "></i>
+                                                                    <span></span>
+                                                                </div>
+                                                                <div class="check-out" id="check-out-time2">
+                                                                    <label>landing</label>
+                                                                    <span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>      
+                                            <br />
+                                            <div class="toggle-container filters-container" style="background:#ffc30d">
+                                                <div class="panel style1 arrow-right" style="background:#ffcc00">
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" href="#outbound-extras" style="font-size:medium">Outbound extras</a>
+                                                    </h4>
+                                                    <div id="outbound-extras" class="panel-collapse collapse">
+                                                        <div class="panel-content" style="padding: 10px 15px 15px 55px;">
+                                                            <table class="myTable2">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <b>Passenger</b>
+                                                                        </th>
+                                                                        <th>
+                                                                            <b>Refundable</b>
+                                                                        </th>
+                                                                        <th>
+                                                                            <b>Cancellable</b>
+                                                                        </th>
+                                                                        <th>
+                                                                            <b>Changeable</b>
+                                                                        </th>
+                                                                        <th>
+                                                                            <b>+Bag</b>
+                                                                        </th>
+                                                                        <th>
+                                                                            <b>Seat Priority</b>
+                                                                        </th>
+                                                                    </tr>
+                                                                    {% with ''|center:total_pax as range %}
+                                                                        {% for i in range %}
+                                                                            <div class="table-row second-flight" id="out-pax-summary-{{forloop.counter}}" style="border-radius:4px;background:#eee">
+                                                                                <tr>
+                                                                                    <td id="out-table-cell-flight-no-{{forloop.counter}}"></td>
+                                                                                    <div class="check-in" id="out-check-in-time-{{forloop.counter}}">
+                                                                                        <div id="outbound-extra-list-{{forloop.counter}}">
+                                                                                            <td id="out-refund-{{forloop.counter}}"></td>
+                                                                                            <td id="out-cancell-{{forloop.counter}}"></td>
+                                                                                            <td id="out-change-{{forloop.counter}}"></td>
+                                                                                            <td id="out-extrab-{{forloop.counter}}"></td>
+                                                                                            <td id="out-seatp-{{forloop.counter}}"></td>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </tr>
+                                                                            </div>
+                                                                        {% endfor %}
+                                                                    {% endwith %}
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div id="in-pax-summ2" style="display:none;background:#ffcc00" class="panel style1 arrow-right" >
+                                                    <h4 class="panel-title">
+                                                        <a data-toggle="collapse" href="#inbound-extras"  style="font-size:medium">Inbound extras</a>
+                                                        <!--<a id="inflight-experience" href="#inflight-experience-filter">Extras</a>-->
+                                                    </h4>
+                                                    <div id="inbound-extras" class="panel-collapse collapse">
+                                                        <div class="panel-content" style="padding: 10px 15px 15px 55px;">
+                                                            <table class="myTable2">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <b>Passenger</b>
+                                                                        </th>
+                                                                        <th>
+                                                                            <b>Refundable</b>
+                                                                        </th>
+                                                                        <th>
+                                                                            <b>Cancellable</b>
+                                                                        </th>
+                                                                        <th>
+                                                                            <b>Changeable</b>
+                                                                        </th>
+                                                                        <th>
+                                                                            <b>+Bag</b>
+                                                                        </th>
+                                                                        <th>
+                                                                            <b>Seat Priority</b>
+                                                                        </th>
+                                                                    </tr>
+                                                                    {% with ''|center:total_pax as range %}
+                                                                        {% for i in range %}
+                                                                            <div class="table-row second-flight" id="in-pax-summary-{{forloop.counter}}" style="border-radius:4px;background:#eee">
+                                                                            <tr>
+                                                                                <td id="in-table-cell-flight-no-{{forloop.counter}}"></td>
+                                                                                <div class="check-in" id="in-check-in-time-{{forloop.counter}}">
+                                                                                    <div id="inbound-extra-list-{{forloop.counter}}">
+                                                                                        <td id="in-refund-{{forloop.counter}}"></td>
+                                                                                        <td id="in-cancell-{{forloop.counter}}"></td>
+                                                                                        <td id="in-change-{{forloop.counter}}"></td>
+                                                                                        <td id="in-extrab-{{forloop.counter}}"></td>
+                                                                                        <td id="in-seatp-{{forloop.counter}}"></td>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </tr>
+                                                                            </div>
+                                                                        {% endfor %}
+                                                                    {% endwith %}
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </div>
+                                {% if flights_in %}
+                                <article class="box" style="border-radius:4px;background:#000">
+                                <h4><strong style="color:#fff">Returning Flights</strong></h4>
+                                </article>
+                                 {% for flt in flights_in %}
+                                <article class="box inbound-list" style="border-radius:4px;border-color:#000;background:#ffcc00">
+                                    <!--<figure class="col-xs-3 col-sm-2">
+                                        <img alt="" src="{{flt.img.url}}"  style="width:95px;height:130px;">
+                                    </figure>-->
+                                    <div class="details col-xs-9 col-sm-10">
+                                        <div id="inbound-details-wrapper" class="details-wrapper">
+                                            <div class="first-row">
+                                                <div>
+                                                    <h4 class="box-title">{{flt.orig}} to {{flt.dest}}<small>Oneway flight</small></h4>
+                                                    <a class="button btn-mini stop">{{flt.flt_no}}</a>
+                                                    <div class="amenities">
+
+                                                        <div class="tooltip1">
+                                                            <i class="soap-icon-card circle"></i>
+                                                            <span class="tooltiptext1">Refundable ticket: +R{{flt.refundable_price}}</span>
+                                                        </div>
+                                                        
+                                                        <div class="tooltip1">
+                                                            <i class="soap-icon-liability circle"></i>
+                                                            <span class="tooltiptext1">Cancellable ticket: +R{{flt.cancellable_price}} </span>
+                                                        </div>
+
+                                                        <div class="tooltip1">
+                                                            <i class="soap-icon-stories circle"></i>
+                                                            <span class="tooltiptext1">Changeable ticket: +R{{flt.changeable_price}}</span>
+                                                        </div>
+
+                                                        <div class="tooltip1">
+                                                            <i class="soap-icon-carryon circle"></i>
+                                                            <span class="tooltiptext1">Extra baggage: +R{{flt.extrabag_price}}</span>
+                                                        </div>
+
+                                                        <div class="tooltip1">
+                                                            <i class="soap-icon-passenger circle"></i>
+                                                            <span class="tooltiptext1">Seat priority: +R{{flt.extrabag_price}}</span>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="price"><small>AVG/PERSON</small><strong><small2>R </small2>{{flt.flt_price}}</strong></span>
+                                                </div>
+                                            </div>
+                                            <div class="second-row">
+                                                <div class="time">
+                                                    <div class="take-off col-sm-4">
+                                                        <div class="icon"><i class="soap-icon-plane-right white-color"></i></div>
+                                                        <div>
+                                                            <span class="skin-color">Take off</span><br />{{flt.dep_date|date:"D d M Y"}}<br /><div class="ftime">{{flt.dep_date|time:"H:i:a"}}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="landing col-sm-4">
+                                                        <div class="icon"><i class="soap-icon-plane-right white-color"></i></div>
+                                                        <div>
+                                                            <span class="skin-color">landing</span><br />{{flt.arr_date|date:"D d M Y"}}<br /><div class="ftime">{{flt.arr_date|time:"H:i:a"}}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="total-time col-sm-4">
+                                                        <div class="icon"><i class="soap-icon-clock white-color"></i></div>
+                                                        <div>
+                                                            <span class="skin-color">total time</span><br />{{flt.flight_hrs}}H {{flt.flight_mins}}M
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action">
+                                                    {% with counter_value=forloop.counter0|stringformat:"s" %} 
+                                                    <a id="select-base-booking-in-{{counter_value}}" class="button btn-small full-width" data-value={{flt.id}} style="pointer-events: none">SELECT NOW</a>
+                                                    {% endwith %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                {% endfor %}
+                                {% else %}
+                                    <div class="alert alert-info" id="no-flight" style="text-align:center;font-size:15px;">No return flights to display</div>
+                                {% endif %}
                             </div>
                             <!--<a class="button uppercase full-width btn-large">load more listings</a>-->
                         </div>
@@ -943,6 +1739,7 @@
             <div class="footer-wrapper">
                 <div class="container">
                     <div class="row">
+                    <!--
                         <div class="col-sm-6 col-md-3">
                             <h2>Discover</h2>
                             <ul class="discover triangle hover row">
@@ -999,8 +1796,9 @@
                             <br />
                             <span>We respect your privacy</span>
                         </div>
+                        -->
                         <div class="col-sm-6 col-md-3">
-                            <h2>About Travelo</h2>
+                            <h2>About Lift Airlines</h2>
                             <p>Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massaidp nequetiam lore elerisque.</p>
                             <br />
                             <address class="contact-details">
@@ -1025,27 +1823,29 @@
                 <div class="container">
                     <div class="logo pull-left">
                         <a href="index.html" title="Travelo - home">
-                            <img src="{{baseUrl}}/{{logo1.png}}" alt="Travelo HTML5 Template" />
+                            <img src="{{baseUrl}}/Lift2.jpg" alt="Travelo HTML5 Template" />
                         </a>
                     </div>
                     <div class="pull-right">
                         <a id="back-to-top" href="#" class="animated" data-animation-type="bounce"><i class="soap-icon-longarrow-up circle"></i></a>
                     </div>
+                    <!--
                     <div class="copyright pull-right">
                         <p>&copy; 2014 Travelo</p>
                     </div>
+                    -->
                 </div>
             </div>
         </footer>
     </div>
 
     <!-- Javascript -->
-    <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.noconflict.js' %}"></script>
+    
     <script type="text/javascript" src="{% static 'js/modernizr.2.7.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.placeholder.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery-ui.1.10.4.min.js' %}"></script>
+    
     
     <!-- Twitter Bootstrap -->
     <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
@@ -1111,7 +1911,10 @@
             });
             tjq(".start-time-label").html( convertTimeToHHMM(tjq("#flight-times").slider( "values", 0 )) );
             tjq(".end-time-label").html( convertTimeToHHMM(tjq("#flight-times").slider( "values", 1 )) );
+
         });
+
+        
     </script>
 </body>
 </html>
